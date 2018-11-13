@@ -8,7 +8,8 @@ public class MainDriver {
 	
 		//VAR
         Scanner sc = new Scanner(System.in);
-        Game game = new Game();
+        Menu menu = new Menu();
+        
 
         String exceptionMessage = "Veuillez taper sur entrée qu'une fois la saisie effectuée !";
         char choice = '\0';
@@ -18,7 +19,7 @@ public class MainDriver {
         //************************
 
 
-        game.mainMenu();
+        menu.mainMenu();
 
 	}
 

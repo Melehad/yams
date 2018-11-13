@@ -7,61 +7,59 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Scanner;
+
 
 
 public class Data {
 
 	private String fileName = "saveGame.txt";
     private File file = new File(fileName);
-    private Scanner sc = new Scanner(System.in);
+    //private Scanner sc = new Scanner(System.in);
 
     
-    public Data() {
-    }
+    public Data() {}
 
     public void saveGame(String nameUser, String tab) {
-    	
-    	
-    	
-        //on demande � l'utilisateur s'il veut sauvegarder son jeu
-        // si oui, on �crit dans le fichier
+
+        //on demande à l'utilisateur s'il veut sauvegarder son jeu
+        // si oui, on écrit dans le fichier
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file))) {
             bufferedWriter.write(nameUser);
             bufferedWriter.newLine();
             bufferedWriter.write(tab);
             
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
-
     }
 
 
-    public char loadGame() {
+    public void loadGame() {
 
-        BufferedReader bufferedReader = null;
-        char letter = '\n';
+        BufferedReader bufferedReader = null;       
+        String messageEmpty = "Aucune sauvegarde !";
 
-        try {
-            FileReader fileReader = new FileReader(file);
-            // met en tampon le contenu
-            bufferedReader = new BufferedReader(fileReader);
+        try {  
 
-            String line = "";
-            // lit la ligne
-            if ((line = bufferedReader.readLine()) == null) {
-            	letter = 'H';
-            }else {
-                letter = line.charAt(0);
-            }
+        	FileReader fileReader = new FileReader(file);
+			bufferedReader = new BufferedReader(fileReader);
+			String line;
 
+			if ((line = bufferedReader.readLine()) != null) {
+				System.out.println("***************************");
+				System.out.println("******  Votre score  ******");
+				System.out.println("***************************");
+
+				do {
+					System.out.println(line);
+				} while ((line = bufferedReader.readLine()) != null);
+
+			} else {
+				System.err.println(messageEmpty);	
+			}
 
         } catch (FileNotFoundException e) {
-            System.err.printf("Le fichier %s n'a pas �t� trouv�.", file.toString());
+            System.err.printf("Le fichier %s n'a pas été trouvé.", file.toString());
         } catch (IOException e) {
             System.err.println("Impossible de lire le contenu du fichier " + file.toString());
             // execute finally quoiqu'il arrive
@@ -79,6 +77,6 @@ public class Data {
 
         }
 
-        return letter;
+
     }
 }

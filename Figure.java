@@ -21,7 +21,7 @@ public class Figure {
 		StringHashMap.put("brelan", 0);// brelan
 		StringHashMap.put("suite", 0);// suite
 		StringHashMap.put("full", 0);// full
-		StringHashMap.put("carr�", 0);// carr�
+		StringHashMap.put("carré", 0);// carré
 		StringHashMap.put("yams", 0);// yams
 		StringHashMap.put("sous-total figure", 0);// sous-total
 		StringHashMap.put("total", 0);// total
@@ -38,30 +38,15 @@ public class Figure {
 				+ "\nSous-total chiffre : " + this.StringHashMap.get("sous-total chiffre") 
 				+ "\nPaire : " + this.StringHashMap.get("paire")
 				+ "\nDouble-paire : " + this.StringHashMap.get("double-paire")
-				+ "\nbrelan : " + this.StringHashMap.get("brelan")
-				+ "\nsuite : " + this.StringHashMap.get("suite")
-				+ "\nfull : " + this.StringHashMap.get("full")
-				+ "\ncarr� : " + this.StringHashMap.get("carr�")
-				+ "\nyams : " + this.StringHashMap.get("yams")
+				+ "\nBrelan : " + this.StringHashMap.get("brelan")
+				+ "\nSuite : " + this.StringHashMap.get("suite")
+				+ "\nFull : " + this.StringHashMap.get("full")
+				+ "\nCarré : " + this.StringHashMap.get("carré")
+				+ "\nYams : " + this.StringHashMap.get("yams")
 				+ "\nSous-total figure : " + this.StringHashMap.get("sous-total figure")
 				+ "\nTotal : " + this.StringHashMap.get("total")
 				;
-//		System.out.println("Ligne 1 : " + this.StringHashMap.get("1"));
-//		System.out.println("Ligne 2 : " + this.StringHashMap.get("2"));
-//		System.out.println("Ligne 3 : " + this.StringHashMap.get("3"));
-//		System.out.println("Ligne 4 : " + this.StringHashMap.get("4"));
-//		System.out.println("Ligne 5 : " + this.StringHashMap.get("5"));
-//		System.out.println("Ligne 6 : " + this.StringHashMap.get("6"));
-//		System.out.println("Sous-total chiffre : " + this.StringHashMap.get("sous-total chiffre"));
-//		System.out.println("Paire : " + this.StringHashMap.get("paire"));
-//		System.out.println("Double-paire : " + this.StringHashMap.get("double-paire"));
-//		System.out.println("brelan : " + this.StringHashMap.get("brelan"));
-//		System.out.println("suite : " + this.StringHashMap.get("suite"));
-//		System.out.println("full : " + this.StringHashMap.get("full"));
-//		System.out.println("carr� : " + this.StringHashMap.get("carr�"));
-//		System.out.println("yams : " + this.StringHashMap.get("yams"));
-//		System.out.println("Sous-total figure : " + this.StringHashMap.get("sous-total figure"));
-//		System.out.println("Total : " + this.StringHashMap.get("total"));
+
 	}
 
 }
